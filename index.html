@@ -10,15 +10,38 @@
 
     
     <script src="./demo/montyHallGameDemo.js" type="module" defer></script>
-
 </head>
 <body>
     <div id="app">
         <header>
 
         </header>
-        <main>
-
+        <main class="wrapper flex-center">
+            <section class="game-wrapper flex-center flex-dir-col">
+                <div class="game-notifications">
+                    <img class="mh-avatar" src="./assets/images/mh.jpg" alt="" srcset="">
+                </div>
+                <div class="game-content flex-center">
+                    <div class="block flex-center">
+                        <div class="door">
+                            <img class="door-image" data-door-number="1" src="./assets/images/door1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="block flex-center">
+                        <div class="door">
+                            <img class="door-image" data-door-number="2" src="./assets/images/door2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="block flex-center">
+                        <div class="door">
+                            <img class="door-image" data-door-number="3" src="./assets/images/door3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="game-statistics">
+                    <button id="play">play</button>
+                </div>
+            </section>
         </main>
         <footer>
 

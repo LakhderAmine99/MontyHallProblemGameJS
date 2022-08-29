@@ -3,6 +3,6 @@ import MHUI from './montyHall/@montyHall.ui.js';
 
 export const MontyHallPack = {
 
-    MontyHall:MontyHall,
-    MHUI:MHUI
+    MontyHall:new MontyHall(),
+    MHUI:new MHUI()
 }

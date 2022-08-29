@@ -17,17 +17,63 @@ class MontyHall {
 
     #takenDoors = null;
 
+    #winsBySwitching = 0;
+    #winsByKeeping = 0;
+
     constructor(){
+
+        this.#initState();
+    }
+
+    /**
+     * 
+     */
+    #initState(){
 
         this.#probabilities = [1/3,1/3,1/3];
         this.#prizeDoor = Randomize.random(2);
         this.#takenDoors = [0,0,0];
+
+        this.#takenDoors[this.#prizeDoor] = 1;
     }
 
+    /**
+     * 
+     */
     updateProbabilities(){
         
         this.#probabilities[this.#hostOpenedDoor-1] = 0;
         this.#probabilities[this.#switchingDoor-1] = 2/3;
+    }
+
+    /**
+     * 
+     */
+    keepTheDoor(){
+
+        if(this.#contestentChoosedDoor == this.#prizeDoor){
+            this.#winsByKeeping++;
+        }
+    }
+
+    /**
+     * 
+     */
+    switchTheDoor(){
+
+        this.contestentChoosedDoor = this.switchToDoor;
+
+        if(this.#contestentChoosedDoor == this.#prizeDoor){
+            this.#winsBySwitching++;
+        }
+    }
+
+    /**
+     * 
+     */
+    resetState(){
+
+        this.#initState();
     }
     
     /**
@@ -35,19 +81,16 @@ class MontyHall {
      */
     set contestentChoosedDoor(value){
 
-        this.#contestentChoice = value;
-        this.#takenDoors[value-1] = 1;
-    }
-
-    /**
-     * @param {number} value
-     */
-    set hostOpenedDoor(value){
-
-        this.#hostOpenedDoor = value;
+        this.#contestentChoosedDoor = value;
         this.#takenDoors[value-1] = 1;
 
-        this.#switchingDoor = this.#takenDoors.indexOf(0)+1;
+        this.#takenDoors.forEach((door,index) => {
+
+            if(index != this.hostChoosedDoor && index != this.contestentChoosedDoor){
+
+                this.#switchingDoor = index;
+            }
+        });
     }
 
     /**
@@ -61,9 +104,33 @@ class MontyHall {
     /**
      * 
      */
-    get prizeDoorNumber(){
+    get contestentChoosedDoor(){
 
-        return this.#prizeDoorNumber;
+        return this.#contestentChoosedDoor-1;
+    }
+
+    /**
+     * 
+     */
+    get hostChoosedDoor(){
+
+        return this.#takenDoors.indexOf(0);
+    }
+
+    /**
+     * 
+     */
+    get switchToDoor(){
+
+        return this.#switchingDoor;
+    }
+
+    /**
+     * 
+     */
+    get prizeDoor(){
+
+        return this.#prizeDoor;
     }
 }
 

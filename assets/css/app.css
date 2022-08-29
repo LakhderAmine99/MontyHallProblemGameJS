@@ -5,5 +5,111 @@
 }
 
 html,body{
-    
+    height: 100%;
 }
+
+#app{
+    
+    background: url('../images/background.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-dir-col{
+    flex-direction: column;
+}
+
+main{
+    height: 100%;
+}
+
+.block{
+    position: relative;
+    cursor: pointer;
+    margin: 0 2rem;
+}
+
+.door{
+    pointer-events: none;
+    border: 8px groove gainsboro;
+    border-bottom: none;
+    background-color: rgba(71, 33, 9, 0.773);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.door .door-image{
+    
+    position: relative;
+    z-index: 100;
+    pointer-events: none;
+    box-shadow: 15px 25px 40px rgba(7, 0, 0, 0.488);
+    transform-origin: left;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+}
+
+.block .inside-image{
+
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.game-wrapper{
+
+}
+
+.game-notifications{
+
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.mh-avatar{
+
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 15px 25px 40px rgba(7, 0, 0, 0.488);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0;
+    transform: translateY(-400px);
+}
+
+.game-statistics{
+
+    margin-top: 2rem;
+}
+
+/***************/
+
+.opened{
+
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+    box-shadow: 70px 5px 40px rgba(7, 0, 0, 0.488);
+}
+
+.fadeIn{
+    opacity: 1 !important;
+    transform: translateY(-50%) !important;
+}
+
+.selected{
+
+    border-color: rgb(255, 208, 0);
+}
+
+
