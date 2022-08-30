@@ -2,13 +2,16 @@
 
 ## Overview
 
-Imagine you're in the show called 'Monty Hall Show', the show is presented as a game of chances,
-the host or to be certain 'Mr Monty Hall' the host of the show asks you to choose on of the three doors,
-one of those doors hides the car, and the other two hides a goat, after you have made your choice, 
-the host opens a door that hides a one of two goats, then he tells you to either keep your first choice or to swtich to other reamining door.
+Imagine you're in a 1960's TV game show called 'Let's Make a Deal', The show present a game of chances,
+The host, A certain Mr Monty Hall asks you to choose one of the three large doors,
+One of those doors hides the car, And behind the other two there are goats, After you have made your choice, The host opens another door revealing a goat, He then tells you whether you want to stay with your initial choice, Or switch to the remaining closed door.
 
-The host always will make the move, he naturaly knows which door hides the prize 'The Car', so when you have made your choice even
-if you choose the correct door or not, he will reaveal a door that hides a goat, and always keep asking you to switch or keep your choice,
+So would you switch or stay ?!
+
+The host always will make the move, He naturaly knows which door hides the prize 'The Car', So when you have made your choice whether
+if you choose the correct door or not, He will reveal a door that hides a goat, And always asks you to switch or keep your initial choice.
+
+    - The origins of the MHP
 
 ## Preview
 
