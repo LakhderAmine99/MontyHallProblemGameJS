@@ -8,6 +8,18 @@ export default function MHUI(){
     this.doors = null;
 
     /**
+     * @type {[]} gameMessages
+     */
+    this.gameMessages = [
+
+        "<b>Let's make a deal !</b><br>Do you want to keep the door or switch to win your prize !",
+        "Alright, you made your choice and the wining door is...",
+        "Let's make a new deal, let's try to play the game again !",
+        "Ok then, you got your prize, your car !, this all by switching to the other door !",
+        "I told you to switch not to loose your beautifull car !"
+    ];
+
+    /**
      * 
      * @param {string} fileName 
      * @returns 
@@ -74,21 +86,6 @@ export default function MHUI(){
 
             door.querySelector('.door-image').classList.remove('opened');
         });
-    }
-
-    /**
-     * 
-     * @param {string} message 
-     * @param {HTMLElement} wrapper 
-     */
-    this.notify = function(message,wrapper){
-
-        let messageElement = document.createElement('div');
-        messageElement.innerHTML = message;
-
-        messageElement.style = "text-align:center;"
-
-        wrapper.appendElement(messageElement);
     }
 
     /**

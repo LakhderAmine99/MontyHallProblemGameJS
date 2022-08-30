@@ -1,4 +1,4 @@
-import { MontyHallPack } from '../src/index.js';  
+import { MHP } from '../src/index.js';  
 
 function MontyHallGameDemo(){
 
@@ -12,14 +12,6 @@ function MontyHallGameDemo(){
     const notification = document.querySelector('.talking');
 
     const messagePanel = document.querySelector('.message');
-
-    const gameMessages = [
-        "<b>Let's make a deal !</b><br>Do you want to keep the door or switch to win your prize !",
-        "Alright, you made your choice and the wining door is...",
-        "Let's make a new deal, let's try to play the game again !",
-        "Ok then, you got your prize, your car !, this all by switching to the other door !",
-        "I told you to switch not to loose your beautifull car !"
-    ];
 
     let state = "starting";
 
@@ -40,7 +32,7 @@ function MontyHallGameDemo(){
 
         initEventListeners();
 
-        MontyHallPack.MHUI.init(doors,MontyHallPack.MontyHall.prizeDoor);
+        MHP.MHUI.init(doors,MHP.MontyHall.prizeDoor);
     }
 
     /**
@@ -61,7 +53,7 @@ function MontyHallGameDemo(){
 
         let targetImage = e.target.querySelector('.door-image');
 
-        MontyHallPack.MontyHall.contestentChoosedDoor = parseInt(targetImage.getAttribute('data-door-number'));
+        MHP.MontyHall.contestentChoosedDoor = parseInt(targetImage.getAttribute('data-door-number'));
 
         notification.classList.remove('fadeIn');
 
@@ -71,13 +63,14 @@ function MontyHallGameDemo(){
 
                 e.target.querySelector('.door').classList.add('selected');
 
-                let hostChoosedDoor = doorsImages[MontyHallPack.MontyHall.hostChoosedDoor];
+                let hostChoosedDoor = doorsImages[MHP.MontyHall.hostChoosedDoor];
         
                 window.setTimeout(()=>{
         
-                    messagePanel.innerHTML = gameMessages[0];
+                    messagePanel.innerHTML = MHP.MHUI.gameMessages[0];
                     notification.classList.add('fadeIn');
-                    MontyHallPack.MHUI.openDoor([hostChoosedDoor]);
+                    
+                    MHP.MHUI.openDoor([hostChoosedDoor]);
         
                 },1000);
 
@@ -89,24 +82,25 @@ function MontyHallGameDemo(){
                 
                 window.setTimeout(()=>{
                     
-                    messagePanel.innerHTML = gameMessages[1];
+                    messagePanel.innerHTML = MHP.MHUI.gameMessages[1];
                     notification.classList.add('fadeIn');
-                    MontyHallPack.MHUI.openDoor(doorsImages);
 
-                    doors[MontyHallPack.MontyHall.contestentChoosedDoor].classList.add('selected-wrong');
-                    doors[MontyHallPack.MontyHall.prizeDoor].classList.add('selected-prize');
+                    MHP.MHUI.openDoor(doorsImages);
+
+                    doors[MHP.MontyHall.contestentChoosedDoor].classList.add('selected-wrong');
+                    doors[MHP.MontyHall.prizeDoor].classList.add('selected-prize');
 
                 },1000);
 
-                state = "playAgain";
+                state = "playing_again";
             
             break;
 
-            case 'playAgain':
+            case 'playing_again':
 
                 window.setTimeout(()=>{
                     
-                    messagePanel.innerHTML = gameMessages[2];
+                    messagePanel.innerHTML = MHP.MHUI.gameMessages[2];
                     notification.classList.add('fadeIn');
         
                 },1000);
@@ -123,8 +117,8 @@ function MontyHallGameDemo(){
 
         state = "starting";
 
-        MontyHallPack.MontyHall.resetState();
-        MontyHallPack.MHUI.reset(MontyHallPack.MontyHall.prizeDoor);
+        MHP.MontyHall.resetState();
+        MHP.MHUI.reset(MHP.MontyHall.prizeDoor);
 
         notification.classList.remove('fadeIn');
 
