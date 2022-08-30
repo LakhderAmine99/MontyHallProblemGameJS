@@ -13,16 +13,16 @@ if you choose the correct door or not, He will reveal a door that hides a goat, 
 
 - The origins of the MHP
 
-    Also known as The Monty Hall Paradox, The problem was introduced by the `#ff8811` bio-statistician **Steve Selvin** (1975a), In a letter to the journal ***The American Statistician***.
+    Also known as The Monty Hall Paradox, The problem was introduced by the bio-statistician **Steve Selvin** (1975a), In a letter to the journal ***The American Statistician***.
 
 ## Preview
 
-<img src="https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(1).png">
+![1_image](https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(1).png)
 
 <br/>
 
-<img src="https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(2).png">
+![2_image](https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(2).png)
 
 <br/>
 
-<img src="https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(3).png">
+![3_image](https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(3).png)
