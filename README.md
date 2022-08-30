@@ -19,10 +19,6 @@ if you choose the correct door or not, He will reveal a door that hides a goat, 
 
 ![1_image](https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(1).png)
 
-<br/>
-
 ![2_image](https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(2).png)
-
-<br/>
 
 ![3_image](https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(3).png)
