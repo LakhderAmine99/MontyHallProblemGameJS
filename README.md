@@ -11,7 +11,7 @@ So would you switch or stay ?!
 The host always will make the move, He naturaly knows which door hides the prize 'The Car', So when you have made your choice whether
 if you choose the correct door or not, He will reveal a door that hides a goat, And always asks you to switch or keep your initial choice.
 
-**- The origins of the MHP**
+**The origins of the MHP**
 
 Also known as The Monty Hall Paradox, The problem was introduced by the bio-statistician **Steve Selvin** (1975a), In a letter to the journal ***The American Statistician***.
 
