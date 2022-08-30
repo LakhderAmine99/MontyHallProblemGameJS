@@ -12,3 +12,12 @@ if you choose the correct door or not, he will reaveal a door that hides a goat,
 
 ## Preview
 
+<img src="https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(1).png">
+
+<br/>
+
+<img src="https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(2).png">
+
+<br/>
+
+<img src="https://github.com/LakhderAmine99/MontyHallProblemGameJS/blob/main/screenshots/mh%20(3).png">
